@@ -2,7 +2,11 @@ from django.shortcuts import render, HttpResponse
 
 
 def index(request):
-    return render(request, 'products/products.html')
+    context = {
+        'title': 'Наше новое название!',
+        'is_promotion': True,
+    }
+    return render(request, 'products/products.html', context)
 
 
 def products1(request):

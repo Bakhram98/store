@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Store - Каталог</title>
+    <title>{{ title }}</title>
 
     <!-- Bootstrap core CSS -->
     <link type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
@@ -33,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="products.html">Каталог <i class="fas fa-shopping-bag"></i> </a>
+                    <a class="nav-link" href="products.html">{% if is_promotion %}Каталог{% endif %} <i class="fas fa-shopping-bag"></i> </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="users/login.html">Войти <i class="fas fa-sign-in-alt"></i></a>
