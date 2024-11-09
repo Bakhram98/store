@@ -2,11 +2,12 @@ from django.shortcuts import render, HttpResponse
 from .models import *
 
 def index(request):
+    news = News.objects.all()
     context = {
-        'title': 'Наше новое название!',
-        'is_promotion': True,
+        'title': 'Новости',
+        'news': news,
     }
-    return render(request, 'products/products.html', context)
+    return render(request, 'products/main1.html', context)
 
 
 def products1(request):
