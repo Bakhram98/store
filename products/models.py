@@ -1,9 +1,14 @@
 from django.db import models
 
 
-class ProductCategory(models.Model):
-    name = models.CharField(max_length=100)
-    discribtion = models.TextField()
+class News(models.Model):
+    title = models.CharField(max_length=150)
+    content = models.TextField(blank=True) # необязательное поле
+    created_ad = models.DateTimeField(auto_now_add=True)
+    updated_ad = models.DateTimeField(auto_now=True)
+    photo = models.ImageField(upload_to='photos/%Y/%m/%d')
+    is_published = models.BooleanField(default=True)
 
 
-# Create your models here.
+
+
